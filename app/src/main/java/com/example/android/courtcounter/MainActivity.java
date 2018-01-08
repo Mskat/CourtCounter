@@ -2,10 +2,13 @@ package com.example.android.courtcounter;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    int scoreTeamA = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,16 +17,28 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamA(8);
     }
 
+    /**
+     * Increase the score by 3 points
+     */
     public void addThreePoints(View view){
-        displayForTeamA(3);
+        scoreTeamA = scoreTeamA + 3;
+        displayForTeamA(scoreTeamA);
     }
 
+    /**
+     * Increase the score by 2 points
+     */
     public void addTwoPoints(View view){
-        displayForTeamA(2);
+        scoreTeamA = scoreTeamA + 2;
+        displayForTeamA(scoreTeamA);
     }
 
+    /**
+     * Increase the score by 1 point
+     */
     public void addOnePoint(View view){
-        displayForTeamA(1);
+        scoreTeamA = scoreTeamA + 1;
+        displayForTeamA(scoreTeamA);
     }
 
     /**
