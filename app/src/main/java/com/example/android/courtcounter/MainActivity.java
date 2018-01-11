@@ -2,10 +2,12 @@ package com.example.android.courtcounter;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * This activity keeps track of the basketball score for 2 teams.
+ */
 public class MainActivity extends AppCompatActivity {
 
     int scoreTeamA = 0;
@@ -16,7 +18,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void resetScore(View view){
+
+    /**
+     * Resets the score for both teams to 0 points
+     */
+    public void resetScore(View view) {
         scoreTeamA = 0;
         scoreTeamB = 0;
         displayForTeamA(scoreTeamA);
@@ -26,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Increase the score by 3 points for Team A
      */
-    public void addThreePointsForA(View view){
+    public void addThreePointsForA(View view) {
         scoreTeamA = scoreTeamA + 3;
         displayForTeamA(scoreTeamA);
     }
@@ -34,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Increase the score by 2 points  for Team A
      */
-    public void addTwoPointsForA(View view){
+    public void addTwoPointsForA(View view) {
         scoreTeamA = scoreTeamA + 2;
         displayForTeamA(scoreTeamA);
     }
@@ -42,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Increase the score by 1 point for Team A
      */
-    public void addOnePointForA(View view){
+    public void addOnePointForA(View view) {
         scoreTeamA = scoreTeamA + 1;
         displayForTeamA(scoreTeamA);
     }
@@ -50,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Increase the score by 3 points for Team B
      */
-    public void addThreePointsForB(View view){
+    public void addThreePointsForB(View view) {
         scoreTeamB = scoreTeamB + 3;
         displayForTeamB(scoreTeamB);
     }
@@ -58,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Increase the score by 2 points  for Team B
      */
-    public void addTwoPointsForB(View view){
+    public void addTwoPointsForB(View view) {
         scoreTeamB = scoreTeamB + 2;
         displayForTeamB(scoreTeamB);
     }
@@ -66,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Increase the score by 1 point for Team B
      */
-    public void addOnePointForB(View view){
+    public void addOnePointForB(View view) {
         scoreTeamB = scoreTeamB + 1;
         displayForTeamB(scoreTeamB);
     }
